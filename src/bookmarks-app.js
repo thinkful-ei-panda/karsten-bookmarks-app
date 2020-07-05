@@ -5,7 +5,9 @@ import api from './api.js';
 const generateButtonsBar = () => {
   return `<section class="main-buttons">
     
-    <div class="btn main-btn add-new js-add-new"><i class="fas fa-plus"></i> <span class="new-text">New</span> <i class="hidden bookmark-icon far fa-bookmark"></i></div>
+    <div>
+      <span class="new-text"><button class="btn main-btn add-new  js-add-new">New</button></span>
+    </div>
     <div class="btn main-btn filter-btn"><span>Filter By</span> 
         <select name="rating" id="rating-filter">
             <option value="0">--</option>
@@ -36,7 +38,7 @@ function generateBookmark(bookmark) {
         ${bookmark.desc}
     </p>
 
-    <div class="button-delete hidden-large js-delete-bookmark">Delete</div> 
+    <div><button class="button-delete hidden-large js-delete-bookmark">Delete</button></div> 
 </div>`
     : '';
 
@@ -53,10 +55,11 @@ function generateBookmark(bookmark) {
     : `${generateRating()}`;
 
   return `<li class="js-bookmark-element" data-item-id="${bookmark.id}">
-        <div class="title-section">
-            <h2>${bookmark.title}</h2>
-            <div class="bar-icon">${icon}</div>
-        </div>
+      <div class="title-section">
+        <button type="button" class="block">
+            <h2>${bookmark.title}</h2>   
+        </button>
+      </div>
         ${expandedSection}
         </li>`;
 }
