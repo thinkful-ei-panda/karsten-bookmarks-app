@@ -1,6 +1,6 @@
 Bookmarks-App created by Karsten Taylor
 
-LINK TO LIVE PAGE:
+LINK TO LIVE PAGE: https://thinkful-ei-panda.github.io/karsten-bookmarks-app/.
 
 In this app I can add bookmarks to my bookmark list.
 
